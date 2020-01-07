@@ -49,8 +49,8 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/World/design/icon-preview.git",
-          "tag": "1.0.0",
-          "commit": "152cda4b1682881051d3225c29d21c4189dbe0bb"
+          "tag": "1.0.1",
+          "commit": "a2c1cce6d8225eb620194bc552c077c493563a80"
         }
       ]
     }
