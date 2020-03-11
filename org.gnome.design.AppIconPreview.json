@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.design.AppIconPreview",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.34",
+  "runtime-version": "3.36",
   "sdk": "org.gnome.Sdk",
   "command": "app-icon-preview",
   "finish-args": [
@@ -19,8 +19,8 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/GNOME/libdazzle.git",
-          "tag": "3.34.1",
-          "commit": "0d0814a70f833491f41914532ad2c494f9f0e0ea"
+          "tag": "3.36.0",
+          "commit": "2f4d35523c61121eac0459e01b1510e46fe7f2c8"
         }
       ]
     },
@@ -36,8 +36,8 @@
         {
           "type": "git",
           "url": "https://source.puri.sm/Librem5/libhandy.git",
-          "tag": "v0.0.11",
-          "commit": "f5909a897f70143bdd2f89f47a63c1bf848330ce"
+          "tag": "v0.0.13",
+          "commit": "7a193d7692c9c76a1a94f17c4d30b585f77d177c"
         }
       ],
       "cleanup": ["/bin"]
