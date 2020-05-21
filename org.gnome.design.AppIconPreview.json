@@ -50,7 +50,10 @@
           "type": "archive",
           "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/dba837f02f761d40c910ea8b0ffc409d/app-icon-preview-2.0.0.tar.xz",
           "sha256": "cbbda53cbb965787404936cb3b725d27b8761908bc9ec0c27004fd7569233bae"
-
+        },
+        {
+            "type": "patch",
+            "path": "appdata_screenshot_size.patch"
         }
       ]
     }
