@@ -4,9 +4,7 @@
   "runtime-version": "3.36",
   "sdk": "org.gnome.Sdk",
   "command": "app-icon-preview",
-  "sdk-extensions" : [
-    "org.freedesktop.Sdk.Extension.rust-stable"
-  ],
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
   "finish-args": [
     "--share=ipc",
     "--device=dri",
@@ -14,10 +12,10 @@
     "--socket=wayland",
     "--filesystem=home"
   ],
-  "build-options" : {
-    "append-path" : "/usr/lib/sdk/rust-stable/bin",
-    "env" : {
-      "CARGO_HOME" : "/run/build/app-icon-preview/cargo"
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/app-icon-preview/cargo"
     }
   },
   "modules": [
@@ -52,8 +50,12 @@
           "sha256": "cbbda53cbb965787404936cb3b725d27b8761908bc9ec0c27004fd7569233bae"
         },
         {
-            "type": "patch",
-            "path": "appdata_screenshot_size.patch"
+          "type": "patch",
+          "path": "appdata_screenshot_size.patch"
+        },
+        {
+          "type": "patch",
+          "path": "add-wallpaper-darknening-back.patch"
         }
       ]
     }
