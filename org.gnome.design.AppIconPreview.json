@@ -4,6 +4,9 @@
   "runtime-version": "3.36",
   "sdk": "org.gnome.Sdk",
   "command": "app-icon-preview",
+  "sdk-extensions" : [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
   "finish-args": [
     "--share=ipc",
     "--device=dri",
@@ -13,24 +16,15 @@
   ],
   "modules": [
     {
-      "name": "libdazzle",
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/GNOME/libdazzle.git",
-          "tag": "3.36.0",
-          "commit": "2f4d35523c61121eac0459e01b1510e46fe7f2c8"
-        }
-      ]
-    },
-    {
       "name": "libhandy",
       "buildsystem": "meson",
       "config-opts": [
-        "-Dglade_catalog=disabled",
+        "-Dintrospection=disabled",
+        "-Dgtk_doc=false",
         "-Dtests=false",
-        "-Dexamples=false"
+        "-Dexamples=false",
+        "-Dvapi=false",
+        "-Dglade_catalog=disabled"
       ],
       "sources": [
         {
@@ -47,10 +41,10 @@
       "buildsystem": "meson",
       "sources": [
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/World/design/icon-preview.git",
-          "tag": "1.0.1",
-          "commit": "a2c1cce6d8225eb620194bc552c077c493563a80"
+          "type": "archive",
+          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/dba837f02f761d40c910ea8b0ffc409d/app-icon-preview-2.0.0.tar.xz",
+          "sha256": "cbbda53cbb965787404936cb3b725d27b8761908bc9ec0c27004fd7569233bae"
+
         }
       ]
     }
