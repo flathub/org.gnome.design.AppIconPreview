@@ -33,7 +33,7 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://source.puri.sm/Librem5/libhandy.git",
+          "url": "https://gitlab.gnome.org/GNOME/libhandy.git",
           "tag": "v0.0.13",
           "commit": "7a193d7692c9c76a1a94f17c4d30b585f77d177c"
         }
@@ -46,16 +46,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/dba837f02f761d40c910ea8b0ffc409d/app-icon-preview-2.0.0.tar.xz",
-          "sha256": "cbbda53cbb965787404936cb3b725d27b8761908bc9ec0c27004fd7569233bae"
-        },
-        {
-          "type": "patch",
-          "path": "appdata_screenshot_size.patch"
-        },
-        {
-          "type": "patch",
-          "path": "add-wallpaper-darknening-back.patch"
+          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/ea3c2531c9521d471066d89b58ad7565/app-icon-preview-2.1.0.tar.xz",
+          "sha256": "3631599fd3cd57c4a3e9c9a6ae6e632909622a0cb59b0ca2dd2808219f75fc39"
         }
       ]
     }
