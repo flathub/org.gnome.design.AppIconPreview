@@ -46,8 +46,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/ea3c2531c9521d471066d89b58ad7565/app-icon-preview-2.1.0.tar.xz",
-          "sha256": "3631599fd3cd57c4a3e9c9a6ae6e632909622a0cb59b0ca2dd2808219f75fc39"
+          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/fc93402fef9985ac6820a896e41f82b5/app-icon-preview-2.1.1.tar.xz",
+          "sha256": "06c6ac0bb468f16c0296790c5b4d138ccbc26b37390b4a00a9e19b5d8e6d1b19"
         }
       ]
     }
