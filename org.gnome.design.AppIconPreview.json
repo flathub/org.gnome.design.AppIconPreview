@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.design.AppIconPreview",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.36",
+  "runtime-version": "40",
   "sdk": "org.gnome.Sdk",
   "command": "app-icon-preview",
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
