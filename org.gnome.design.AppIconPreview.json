@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.design.AppIconPreview",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "40",
+  "runtime-version": "41",
   "sdk": "org.gnome.Sdk",
   "command": "app-icon-preview",
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
@@ -13,32 +13,52 @@
     "--filesystem=home"
   ],
   "build-options": {
-    "append-path": "/usr/lib/sdk/rust-stable/bin",
-    "env": {
-      "CARGO_HOME": "/run/build/app-icon-preview/cargo"
-    }
+    "append-path": "/usr/lib/sdk/rust-stable/bin"
   },
   "modules": [
     {
-      "name": "libhandy",
-      "buildsystem": "meson",
-      "config-opts": [
-        "-Dintrospection=disabled",
-        "-Dgtk_doc=false",
-        "-Dtests=false",
-        "-Dexamples=false",
-        "-Dvapi=false",
-        "-Dglade_catalog=disabled"
-      ],
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/GNOME/libhandy.git",
-          "tag": "v0.0.13",
-          "commit": "7a193d7692c9c76a1a94f17c4d30b585f77d177c"
-        }
-      ],
-      "cleanup": ["/bin"]
+        "name" : "libadwaita",
+        "buildsystem" : "meson",
+        "config-opts": [
+            "-Dintrospection=disabled",
+            "-Dgtk_doc=false",
+            "-Dtests=false",
+            "-Dexamples=false",
+            "-Dvapi=false"
+        ],
+        "cleanup": [
+            "/include",
+            "/lib/pkgconfig"
+        ],
+        "sources" : [{
+            "type": "git",
+            "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
+            "tag": "1.0.0.alpha.4"
+        }],
+        "modules": [
+            {
+                "name" : "libsass",
+                "buildsystem" : "meson",
+                "cleanup": ["*"],
+                "sources" : [{
+                    "type" : "git",
+                    "url" : "https://github.com/lazka/libsass.git",
+                    "branch" : "meson",
+                    "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
+                }]
+            },
+            {
+                "name" : "sassc",
+                "buildsystem" : "meson",
+                "cleanup": ["*"],
+                "sources" : [{
+                    "type" : "git",
+                    "url" : "https://github.com/lazka/sassc.git",
+                    "branch" : "meson",
+                    "commit": "82803377c33247265d779af034eceb5949e78354"
+                }]
+            }
+        ]
     },
     {
       "name": "app-icon-preview",
@@ -46,8 +66,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/5dbd43d4a457f7f5c0789bbe89365260/app-icon-preview-2.1.2.tar.xz",
-          "sha256": "7f103f72cb70a33c36396c56e7b5ea952974747195eb43b0f2fb84876d3b3cd4"
+          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/0075f3c004422f378db7ad1ceb8a5837/app-icon-preview-3.0.0.tar.xz",
+          "sha256": "9e2a57f988e3a06f99e0064aab9b0c562f21c6b984cad5fc9aa6e7e00f94f6c7"
         }
       ]
     }
