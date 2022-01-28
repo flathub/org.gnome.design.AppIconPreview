@@ -17,48 +17,71 @@
   },
   "modules": [
     {
-        "name" : "libadwaita",
-        "buildsystem" : "meson",
-        "config-opts": [
-            "-Dintrospection=disabled",
-            "-Dgtk_doc=false",
-            "-Dtests=false",
-            "-Dexamples=false",
-            "-Dvapi=false"
-        ],
-        "cleanup": [
-            "/include",
-            "/lib/pkgconfig"
-        ],
-        "sources" : [{
-            "type": "git",
-            "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
-            "tag": "1.0.0.alpha.4"
-        }],
-        "modules": [
-            {
-                "name" : "libsass",
-                "buildsystem" : "meson",
-                "cleanup": ["*"],
-                "sources" : [{
-                    "type" : "git",
-                    "url" : "https://github.com/lazka/libsass.git",
-                    "branch" : "meson",
-                    "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
-                }]
-            },
-            {
-                "name" : "sassc",
-                "buildsystem" : "meson",
-                "cleanup": ["*"],
-                "sources" : [{
-                    "type" : "git",
-                    "url" : "https://github.com/lazka/sassc.git",
-                    "branch" : "meson",
-                    "commit": "82803377c33247265d779af034eceb5949e78354"
-                }]
-            }
-        ]
+      "name" : "libsass",
+      "buildsystem" : "meson",
+      "cleanup": ["*"],
+      "sources" : [
+        {
+          "type" : "git",
+          "url" : "https://github.com/lazka/libsass.git",
+          "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
+        }
+      ]
+    },
+    {
+      "name" : "sassc",
+      "buildsystem" : "meson",
+      "cleanup": ["*"],
+      "sources" : [
+        {
+          "type" : "git",
+          "url" : "https://github.com/lazka/sassc.git",
+          "commit": "82803377c33247265d779af034eceb5949e78354"
+        }
+      ]
+    },
+    {
+      "name": "pango",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/pango/1.50/pango-1.50.3.tar.xz",
+          "sha256": "4add05edf51c1fb375a1ccde7498914120e23cb280dd7395b1aeb441f1838a4c"
+        }
+      ]
+    },
+    {
+      "name": "gtk",
+      "buildsystem": "meson",
+      "config-opts" : [
+        "-Dbuild-examples=false",
+        "-Dbuild-tests=false"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/gtk/4.6/gtk-4.6.0.tar.xz",
+          "sha256" : "782d5951fbfd585fc9ec76c09d07e28e6014c72db001fb567fff217fb96e4d8c"
+        }
+      ]
+    },
+    {
+      "name": "libadwaita",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dgtk_doc=false",
+        "-Dtests=false",
+        "-Dexamples=false",
+        "-Dvapi=false"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/libadwaita/1.0/libadwaita-1.0.1.tar.xz",
+          "sha256" : "bb49cf5a09d2e8bc144946c2c3272aecd611667fd027f3808b95d7101ed473d6"
+        }
+      ]
     },
     {
       "name": "app-icon-preview",
@@ -66,8 +89,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/0075f3c004422f378db7ad1ceb8a5837/app-icon-preview-3.0.0.tar.xz",
-          "sha256": "9e2a57f988e3a06f99e0064aab9b0c562f21c6b984cad5fc9aa6e7e00f94f6c7"
+          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/205eca4b7e62694d91b1b0c967a1d550/app-icon-preview-3.1.0.tar.xz",
+          "sha256": "4fe6cd3529aa6fbf92880a917a3d1ca63e549080e86acdf092be25562e799a87"
         }
       ]
     }
