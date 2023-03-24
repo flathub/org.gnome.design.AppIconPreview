@@ -1,7 +1,7 @@
 {
-  "app-id": "org.gnome.design.AppIconPreview",
+  "id": "org.gnome.design.AppIconPreview",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "43",
+  "runtime-version": "44",
   "sdk": "org.gnome.Sdk",
   "command": "app-icon-preview",
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
@@ -22,8 +22,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/5fd604dd516f144380c1e593a044ecc9/app-icon-preview-3.2.0.tar.xz",
-          "sha256": "63259d2f61c1aff69112fe3aaec0c4b7934bc6d671802e3a67c9c37f5e948ca6"
+          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/d088bf6ec2dbbb313c8a8f5c160ec520/app-icon-preview-3.3.0.tar.xz",
+          "sha256": "f2c997d43699b987b0016528d501d570a73d2855fc4fb5697d86195272c8a870"
         }
       ]
     }
