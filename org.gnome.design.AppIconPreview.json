@@ -37,7 +37,7 @@
                     }
                 }
             ],
-            "modules": 
+            "modules": [
                 {
                     "name": "cairo",
                     "buildsystem": "meson",
