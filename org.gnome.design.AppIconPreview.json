@@ -1,21 +1,23 @@
 {
-  "id": "org.gnome.design.AppIconPreview",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "44",
-  "sdk": "org.gnome.Sdk",
-  "command": "app-icon-preview",
-  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
-  "finish-args": [
-    "--share=ipc",
-    "--device=dri",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--filesystem=home"
-  ],
-  "build-options": {
-    "append-path": "/usr/lib/sdk/rust-stable/bin"
-  },
-  "modules": [
+    "id": "org.gnome.design.AppIconPreview",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "44",
+    "sdk": "org.gnome.Sdk",
+    "command": "app-icon-preview",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
+    "finish-args": [
+        "--share=ipc",
+        "--device=dri",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--filesystem=home"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin"
+    },
+    "modules": [
         {
             "name": "libadwaita",
             "buildsystem": "meson",
@@ -28,8 +30,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.beta.tar.xz",
-                    "sha256": "5b6a0e51fd7b6273564ce937a9d302ca683e61f05791b09a36a881d3952128a4",
+                    "url": "https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.0.tar.xz",
+                    "sha256": "e51a098a54d43568218fc48fcf52e80e36f469b3ce912d8ce9c308a37e9f47c2",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libadwaita",
@@ -88,8 +90,8 @@
                         {
                             "type": "git",
                             "url": "https://github.com/ximion/appstream.git",
-                            "commit": "1ee6af91310f9deb47f3863a7a7ffb22c46bcce6",
-                            "tag": "v0.16.2",
+                            "commit": "50026949a9a9559d9fedbf577e60073b38ebee6d",
+                            "tag": "v0.16.3",
                             "x-checker-data": {
                                 "type": "git",
                                 "tag-pattern": "^v([\\d.]+)$"
@@ -171,8 +173,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://download.gnome.org/sources/gtk/4.12/gtk-4.12.0.tar.xz",
-                            "sha256": "a6d10829f405b1afc0b65e2a9642c04126a1d1b638d11c6d97426da4f84f1f6f",
+                            "url": "https://download.gnome.org/sources/gtk/4.13/gtk-4.13.1.tar.xz",
+                            "sha256": "53d832a37653fb4672ad7b3d3be656082eeee402177d971fdf8e0cba9a55b9a1",
                             "x-checker-data": {
                                 "type": "gnome",
                                 "name": "gtk",
@@ -183,16 +185,16 @@
                 }
             ]
         },
-    {
-      "name": "app-icon-preview",
-      "buildsystem": "meson",
-      "sources": [
         {
-          "type": "archive",
-          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/131b5efcf8abfe16a28d71c61eaefc04/app-icon-preview-3.4.0.tar.xz",
-          "sha256": "704b0fc017dedc543ae42b20b7dbc00b6e9ea254c63e3e3c2522b68163e16d48"
+            "name": "app-icon-preview",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gitlab.gnome.org/World/design/app-icon-preview/uploads/131b5efcf8abfe16a28d71c61eaefc04/app-icon-preview-3.4.0.tar.xz",
+                    "sha256": "704b0fc017dedc543ae42b20b7dbc00b6e9ea254c63e3e3c2522b68163e16d48"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
