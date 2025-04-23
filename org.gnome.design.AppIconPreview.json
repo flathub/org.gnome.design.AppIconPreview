@@ -21,8 +21,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/-/releases/3.5.0/downloads/app-icon-preview-3.5.0.tar.xz",
-          "sha256": "b8896181f3c25c6f7ecf5690fe3ae8b0fa6edbf269173a7abc53a0c44913ef87"
+          "url": "https://gitlab.gnome.org/World/design/app-icon-preview/-/releases/3.5.1/downloads/app-icon-preview-3.5.1.tar.xz",
+          "sha256": "69fad880e802c7272f6e44c9a5ab7b5bf162dd2e4fd86255ab40baa41e6f93be"
         }
       ]
     }
