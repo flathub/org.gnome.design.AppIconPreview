@@ -8,6 +8,7 @@
   "finish-args": [
     "--share=ipc",
     "--device=dri",
+    "--filesystem=xdg-pictures",
     "--socket=fallback-x11",
     "--socket=wayland"
   ],
